@@ -1,0 +1,200 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2;
+    color: #22223b;
+
+}
+
+div {
+    margin: 0 3vw;
+}
+
+a{
+    color: #F2E9E4;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 1em 0 2em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1em 0 2em;
+}
+
+img {
+    width: 100%;
+}
+
+.navmenu {
+    margin:0;
+    padding: 10px;
+    list-style: none;
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: flex-end;
+
+ }
+
+.header {
+    height: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(34,	34,	59, .8);
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+
+.under_header {
+    height: 50vh;
+    background-color: rgba(34,	34,	59, .8);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    color: #F2E9E4;
+    padding-left: 5vw;
+}
+
+.name {
+    margin-bottom: 70px;
+}
+.about, .portfolio {
+    background-color: #F2E9E4;
+    padding-top: 4em;
+    padding-left: 5vw;
+    padding-bottom: 4rem;
+    /*border: solid #000000;*/
+
+}
+
+.about_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30vw;
+    justify-content: flex-start;
+}
+.about img {
+    height: auto;
+    width: 37.5vw;
+    border-radius: 37.5vw;
+}
+.portfolio_figs{
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: revert;
+}
+figure {
+    text-align: center;
+    background-color: #FFF;
+    width: 50%;
+    max-width: 600px;
+}
+.contacts, .footer {
+    height: 90%;
+    color: #F2E9E4;
+    text-align: center;
+    background-color: rgba(34,	34,	59, .8);
+    padding-top: 4em;
+    padding-left: 5vw;
+    padding-bottom: 2rem;
+    /*border: solid #000000;*/
+}
+
+.window {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    z-index: 200;
+    background: rgba(242, 248, 243, .8);
+}
+
+.popup-container {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50%;
+    left: 0;
+    right: 0;
+    top: 45%;
+    margin: auto;
+    border: solid #000000;
+    padding: 10px;
+    background-color: rgb(34, 34, 59);
+    color: #F2E9E4;
+}
+.icon{
+    cursor: pointer;
+    padding-top: 6px;
+    display: none;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #F2E9E4;
+    margin: 6px 0;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 800px) {
+    .icon{
+        display: block;
+    }
+    .navmenu {
+        display: none;
+    }
+    .about img {
+        width: 300px;
+        border-radius: 300px;
+    }
+    .portfolio_figs{
+        flex-flow: row wrap;
+        flex-shrink: revert;
+    }
+    .portfolio_figs figure {
+        width: 90%;
+    }
+}
+
+/*Styles that transform "hamburger" icon to "X" below*/
+.hamburger .bar2 {
+    visibility: hidden;
+}
+.hamburger .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburger .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/*Styles that transform "hamburger" icon to "X" above*/
+/*Styles that transform "hamburger" menu to vertical below*/
+@media screen and (max-width: 900px) {
+    .navmenu.hamburger {
+        display: flex;
+        flex-flow: column;
+    }
+}
+/*Styles that transform "hamburger" menu to vertical above*/
